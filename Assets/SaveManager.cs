@@ -373,6 +373,16 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    public void SaveJuegoNonStatic()
+    {
+        if (!(Juego is null))
+        {
+            SaveJugadorActual();
+            IOSystem.SaveJuego(Juego);
+            Debug.LogAssertion("Juego guardado" + Juego.ToString());
+        }
+    }
+
     public static void LoadJugadorActual()
     {
         if (findPlayerByNick(Jugador.NickName) is null)
@@ -394,21 +404,24 @@ public class SaveManager : MonoBehaviour
         {
             Juego = new Juego();
             SaveJuego();
-            print("First time");
         }
         else
         {
             if (Jugador != null)
             {
                 LoadJugadorActual();
+            }else
+            {
+                if(Juego.Jugadores.Count != 0 )
+                Jugador = Juego.Jugadores[0];
             }
             Debug.LogAssertion("Juego cargado" + Juego.ToString());
-            string jugadoresDebug = "Los jugadores son: \n";
-            foreach (var au in Juego.Jugadores)
-            {
-                jugadoresDebug += au;
-            }
-            print(jugadoresDebug);
+            //string jugadoresDebug = "Los jugadores son: \n";
+            //foreach (var au in Juego.Jugadores)
+            //{
+            //    jugadoresDebug += au;
+            //}
+            //print(jugadoresDebug);
         }
 
     }
@@ -442,6 +455,11 @@ public class SaveManager : MonoBehaviour
     }
 
     public static void removeJugadorById()
+    {
+        Juego.Jugadores.RemoveAt(findJugadorIndexById(Jugador.Id));
+    }
+
+    public void removeJugadorByIdNonStatic()
     {
         Juego.Jugadores.RemoveAt(findJugadorIndexById(Jugador.Id));
     }

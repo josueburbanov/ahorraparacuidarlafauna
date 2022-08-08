@@ -9,7 +9,6 @@ public class escalera2_controller : MonoBehaviour
     public GameObject TapirBack;
     public GameObject OsoBack;
     private bool isFirstCollision = true;
-    int contCol = 0;
 
     void Start()
     {

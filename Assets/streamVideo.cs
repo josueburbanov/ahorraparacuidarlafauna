@@ -30,6 +30,7 @@ public class streamVideo : MonoBehaviour
         if (gameObject.activeSelf && !oneTime)
         {
             StartCoroutine(playVideo());
+            oneTime = true;
         }
     }
 }

@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private bool paused = false;
-    //public AudioSource audio;
     Animator anim;
     private Rigidbody2D rbPlayerAux;
     private float angularVelAux;

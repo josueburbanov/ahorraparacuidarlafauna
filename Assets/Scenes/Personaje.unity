@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6666667, g: 0.454902, b: 0.23529413, a: 1}
+  m_Color: {r: 0.1792453, g: 0.15268132, b: 0.1251335, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3096,7 +3096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6666667, g: 0.454902, b: 0.23529413, a: 1}
+  m_Color: {r: 0.14150941, g: 0.13036828, b: 0.118814506, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3998,6 +3998,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900002628968570056, guid: 5daa4caa51d4d334bb60de17c14cbd66,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900002628968570057, guid: 5daa4caa51d4d334bb60de17c14cbd66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6900002629672525477, guid: 5daa4caa51d4d334bb60de17c14cbd66,
         type: 3}
       propertyPath: m_Name
@@ -4006,7 +4016,7 @@ PrefabInstance:
     - target: {fileID: 6900002629672525477, guid: 5daa4caa51d4d334bb60de17c14cbd66,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6900002629672525479, guid: 5daa4caa51d4d334bb60de17c14cbd66,
         type: 3}
@@ -4258,7 +4268,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 428097465}
-        m_MethodName: removeJugadorById
+        m_MethodName: removeJugadorByIdNonStatic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4280,7 +4290,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 428097465}
-        m_MethodName: SaveJuego
+        m_MethodName: SaveJuegoNonStatic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4325,7 +4335,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544183086}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1545182870
 GameObject:
   m_ObjectHideFlags: 0

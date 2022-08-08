@@ -8,14 +8,12 @@ public class Rocks_plants_generator : MonoBehaviour
     public GameObject min_plataformPrefab;
     public GameObject last_plataformPrefab;
     public GameObject food;
-    private float height = 2f;
     public float width;
     public int numberOfPlataforms = 100;
     private static bool needRock = false;
     public GameObject vasija;
     public GameObject aguacatillo;
     private bool oneTimeCheck1;
-    private bool oneTimeCheck2;
 
     void Start()
     {

@@ -21,11 +21,8 @@ public class player_controller_back : MonoBehaviour
 
     //UI
     public static int health = 5;
-    //public Text healthText;
 
-    float moveInput = 1;
 
-    int TapCount;
     public float MaxDubbleTapTime;
     float NewTime;
     private Rigidbody2D rbPlayerAux;
@@ -38,7 +35,6 @@ public class player_controller_back : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        TapCount = 0;
     }
 
     // Update is called once per frame

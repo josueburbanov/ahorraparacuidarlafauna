@@ -27,9 +27,7 @@ public class player_controller5 : MonoBehaviour
 
     float moveInput = 1;
 
-    int TapCount;
     public float MaxDubbleTapTime;
-    float NewTime;
     private Rigidbody2D rbPlayerAux;
     private float angularVelAux;
 
@@ -41,7 +39,6 @@ public class player_controller5 : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        TapCount = 0;
     }
 
     // Update is called once per frame
