@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 90dd8e8d0ed1c2c48abb528e7956e10c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: cabeza
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4378
+      y: 4
+      width: 1826
+      height: 2505
+    spriteID: d3abcefeab7e8074e985a3500eeea70e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3649, y: -2942}
+  - name: caparazon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6212
+      y: 4
+      width: 1058
+      height: 3172
+    spriteID: 7667910a6a6189e44af97641f7534948
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4113, y: -900}
+  - name: antebrazo derecho
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1084
+      y: 4890
+      width: 967
+      height: 1580
+    spriteID: 3f837b8e06a0942408fa8f90b4cf15cc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -883, y: 3802}
+  - name: brazo derecho
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7278
+      y: 1356
+      width: 581
+      height: 1049
+    spriteID: d34d6fa08dd9a8a49a16726f690a0f2b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4957, y: -834}
+  - name: cuerpo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2667
+      y: 4
+      width: 1703
+      height: 2756
+    spriteID: 1979a84b84b80cb4386c1c0b4e2a2763
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1766, y: -955}
+  - name: antebrazo izquierdo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4890
+      width: 1072
+      height: 1723
+    spriteID: fdd5247e509e627499c20bf5e9227f3f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 3114}
+  - name: brazo izquierdo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2059
+      y: 4890
+      width: 1272
+      height: 1186
+    spriteID: d0f95b619cc9b594998701966368ada2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1588, y: 3125}
+  - name: pierna derecha 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3339
+      y: 4890
+      width: 1113
+      height: 1346
+    spriteID: 8218e56f87801ea4399e119dbc783121
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1540, y: 4871}
+  - name: pierna derecha 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7278
+      y: 4
+      width: 819
+      height: 1344
+    spriteID: 58e69db7b1fc6b94da562db6c086a47f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5424, y: -660}
+  - name: pierna izquierda 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6621
+      width: 871
+      height: 1399
+    spriteID: c894290904a092a41bcfe31f135bd048
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1038, y: 5907}
+  - name: pierna izquierda 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3413
+      width: 1258
+      height: 1469
+    spriteID: fd801f108a4714b4b98ae47c3dd749a3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -543, y: 3413}
+  - name: caparazon 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2655
+      height: 3401
+    spriteID: e662411474601e74dbed0857397d9b1e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -792, y: -588}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 3451, y: 5451}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 8192
+  textureActualHeight: 8192
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: cabeza
+    spriteName: cabeza
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d3abcefeab7e8074e985a3500eeea70e
+    layerID: 117
+    mosaicPosition: {x: 4378, y: 4}
+  - name: caparazon
+    spriteName: caparazon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7667910a6a6189e44af97641f7534948
+    layerID: 93
+    mosaicPosition: {x: 6212, y: 4}
+  - name: antebrazo derecho
+    spriteName: antebrazo derecho
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f837b8e06a0942408fa8f90b4cf15cc
+    layerID: 83
+    mosaicPosition: {x: 1084, y: 4890}
+  - name: brazo derecho
+    spriteName: brazo derecho
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d34d6fa08dd9a8a49a16726f690a0f2b
+    layerID: 74
+    mosaicPosition: {x: 7278, y: 1356}
+  - name: cuerpo
+    spriteName: cuerpo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1979a84b84b80cb4386c1c0b4e2a2763
+    layerID: 68
+    mosaicPosition: {x: 2667, y: 4}
+  - name: antebrazo izquierdo
+    spriteName: antebrazo izquierdo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fdd5247e509e627499c20bf5e9227f3f
+    layerID: 61
+    mosaicPosition: {x: 4, y: 4890}
+  - name: brazo izquierdo
+    spriteName: brazo izquierdo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d0f95b619cc9b594998701966368ada2
+    layerID: 50
+    mosaicPosition: {x: 2059, y: 4890}
+  - name: pierna derecha 2
+    spriteName: pierna derecha 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8218e56f87801ea4399e119dbc783121
+    layerID: 41
+    mosaicPosition: {x: 3339, y: 4890}
+  - name: pierna derecha 1
+    spriteName: pierna derecha 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 58e69db7b1fc6b94da562db6c086a47f
+    layerID: 29
+    mosaicPosition: {x: 7278, y: 4}
+  - name: pierna izquierda 1
+    spriteName: pierna izquierda 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c894290904a092a41bcfe31f135bd048
+    layerID: 24
+    mosaicPosition: {x: 4, y: 6621}
+  - name: pierna izquierda 2
+    spriteName: pierna izquierda 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fd801f108a4714b4b98ae47c3dd749a3
+    layerID: 18
+    mosaicPosition: {x: 4, y: 3413}
+  - name: caparazon 2
+    spriteName: caparazon 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e662411474601e74dbed0857397d9b1e
+    layerID: 8
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: armadillopiezas Texture
+  prefabAssetName: armadillopiezas Prefab
+  spriteLibAssetName: armadillopiezas Sprite Lib
+  secondarySpriteTextures: []
