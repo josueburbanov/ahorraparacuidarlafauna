@@ -100,9 +100,6 @@ public class player_controller1 : MonoBehaviour
             anim.SetBool("isJumping", true);
         }
 
-        
-
-
         if (Input.GetMouseButton(0) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
@@ -117,9 +114,6 @@ public class player_controller1 : MonoBehaviour
             }
         }
 
-        
-
-
         if (Input.GetMouseButtonUp(0) && !isAbleToDJump)
         {
             isJumping = false;
@@ -132,7 +126,6 @@ public class player_controller1 : MonoBehaviour
             anim.SetTrigger("land");
             isAbleToLand = false;
         }
-
 
         if (isGrounded == false && doubleJump == false && isAbleToDJump == true && Input.GetMouseButtonDown(0))
         {
