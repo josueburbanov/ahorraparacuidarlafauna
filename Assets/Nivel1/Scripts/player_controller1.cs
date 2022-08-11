@@ -10,7 +10,7 @@ public class player_controller1 : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     public float jumpForce;
-    public float speed;
+    public float speed = 8f;
     public float formerSpeed;
     private bool isGrounded;
     public float checkRadius;
@@ -22,8 +22,8 @@ public class player_controller1 : MonoBehaviour
     private bool isJumping;
     private bool doubleJump;
     private bool isAbleToDJump;
+    private bool isAbleToLand;
     public GameObject buttonPause;
-    float moveInput = 1;
     private bool letsmove;
 
     //UI
@@ -46,7 +46,7 @@ public class player_controller1 : MonoBehaviour
         while (Time.realtimeSinceStartup < pauseEndTime)
         {
             yield return 0;
-            
+
         }
         letsmove = true;
         Time.timeScale = 1f;
@@ -76,24 +76,32 @@ public class player_controller1 : MonoBehaviour
 
 
         isGrounded = Physics2D.OverlapCircle(groundPos.position, checkRadius, whatIsGround);
-        if (Input.GetMouseButtonDown(0) && isGrounded == true)
+
+        if (Input.GetMouseButtonDown(0) && isGrounded == true  )
         {
             anim.SetTrigger("takeOf");
             isJumping = true;
+            isGrounded = false;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        if (isGrounded == true)
+        
+
+        if (isGrounded)
         {
             doubleJump = false;
             anim.SetBool("isJumping", false);
+            anim.SetBool("isRunning", true);
             isAbleToDJump = false;
         }
         else
         {
             anim.SetBool("isJumping", true);
         }
+
+        
+
 
         if (Input.GetMouseButton(0) && isJumping == true)
         {
@@ -105,14 +113,24 @@ public class player_controller1 : MonoBehaviour
             else
             {
                 isJumping = false;
+                
             }
         }
 
+        
 
-        if (Input.GetMouseButtonUp(0))
+
+        if (Input.GetMouseButtonUp(0) && !isAbleToDJump)
         {
             isJumping = false;
             isAbleToDJump = true;
+            isAbleToLand = true;
+        }
+
+        if (isAbleToLand && isGrounded)
+        {
+            anim.SetTrigger("land");
+            isAbleToLand = false;
         }
 
 
@@ -128,14 +146,6 @@ public class player_controller1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rb.velocity != Vector2.zero) rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if (rb.velocity == Vector2.zero)
-        {
-            anim.SetBool("isRunning", false);
-        }
-        else
-        {
-            anim.SetBool("isRunning", true);
-        }
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 }

@@ -26,7 +26,7 @@ public class followPlayerX : MonoBehaviour
 
     private void Awake()
     {
-        //prueba.crearJugadorPrueba();
+        prueba.crearJugadorPrueba();
         controllador_caracter.VerificarPersonaje();
     }
 

@@ -5,22 +5,45 @@ using UnityEngine;
 
 public class prueba : MonoBehaviour
 {
-    internal static Jugador crearJuagadorPrueba1()
+    internal static Juego crearJuegoPrueba()
     {
-        return new Jugador() { NickName = "marc" };
+        Juego juego = new Juego()
+        {
+            Id = 0,
+            Jugadores = { new Jugador() { Id = "0001", Ciudad = "Quito", Correoe = "pepe@j.com",
+                NickName = "pepino", Nombre = "Josue",
+                CurrentPartida = new Partida() {
+                    Niveles = new List<Nivel>(new Nivel[7]),
+                    Personaje = "oso"
+                    }
+                }
+            }
+        };
+        return juego;
+    }
+
+    internal static Jugador crearJugadorPruebaInternal()
+    {
+        return new Jugador()
+        {
+            Id = "0001",
+            Ciudad = "Quito",
+            Correoe = "pepe@j.com",
+            NickName = "pepino",
+            Nombre = "Josue",
+            CurrentPartida = new Partida()
+            {
+                Niveles = new List<Nivel>(new Nivel[7]),
+                Personaje = "oso"
+
+            }
+        };
     }
 
     internal static void crearJugadorPrueba()
     {
-        SaveManager.Jugador = crearJuagadorPrueba1();
-        SaveManager.LoadJuego();
-        SaveManager.fetchPartidaStatic("oso");
-        if (SaveManager.Jugador.CurrentPartida == null)
-        {
-            SaveManager.Jugador.CurrentPartida = new Partida()
-            {
-                Niveles = new List<Nivel>(new Nivel[7])
-            };
-        }
+        SaveManager.Juego = crearJuegoPrueba();
+        SaveManager.Jugador = crearJugadorPruebaInternal();
+
     }
 }
