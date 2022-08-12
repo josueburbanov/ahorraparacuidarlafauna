@@ -35,22 +35,20 @@ public class player_controller1 : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(Pause(3));
         formerSpeed = speed;
+        speed = 0;
+        StartCoroutine(Pause(1));
     }
 
     private IEnumerator Pause(int p)
     {
-        Time.timeScale = 0.0001f;
-        float pauseEndTime = Time.realtimeSinceStartup + p;
-        while (Time.realtimeSinceStartup < pauseEndTime)
-        {
-            yield return 0;
-
-        }
+        yield return new WaitForSeconds(p);
+        speed = formerSpeed;
+        print("letsmove");
         letsmove = true;
         Time.timeScale = 1f;
         buttonPause.SetActive(true);
+        anim.SetBool("isRunning", true);
     }
 
 
