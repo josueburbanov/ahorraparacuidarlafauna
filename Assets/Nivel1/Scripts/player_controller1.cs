@@ -57,7 +57,7 @@ public class player_controller1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if someone clicks on UI
+        ////if someone clicks on UI
         if (EventSystem.current.IsPointerOverGameObject())
         {
             anim.SetBool("isJumping", false);
@@ -70,8 +70,10 @@ public class player_controller1 : MonoBehaviour
         }
         if (!letsmove)
         {
-            anim.SetBool("isJumping", false);
             return;
+        }else
+        {
+            anim.SetBool("isRunning", true);
         }
 
 

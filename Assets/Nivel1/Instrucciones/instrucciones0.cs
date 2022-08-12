@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class instrucciones : MonoBehaviour
+public class instrucciones0 : MonoBehaviour
 {
-    private Animator anim;
     private bool isHit;
-    public GameObject canvasInstruccion;
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (!isHit && collider.name == "Oso piezasperfil34")
         {
-            canvasInstruccion.SetActive(true);
             FindInActiveObjectByName("ButtonPause").SetActive(false);
             FindInActiveObjectByName("ButtonPlay").SetActive(false);
             isHit = true;
@@ -30,7 +27,6 @@ public class instrucciones : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isHit)
         {
-            canvasInstruccion.GetComponent<Animator>().SetTrigger("End");
             Time.timeScale = 1;
             FindInActiveObjectByName("ButtonPause").SetActive(true);
         }
