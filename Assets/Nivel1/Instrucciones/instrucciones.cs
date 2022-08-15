@@ -32,8 +32,15 @@ public class instrucciones : MonoBehaviour
         {
             canvasInstruccion.GetComponent<Animator>().SetTrigger("End");
             Time.timeScale = 1;
+            StartCoroutine(Pause(2));
             FindInActiveObjectByName("ButtonPause").SetActive(true);
         }
+    }
+
+    private IEnumerator Pause(int p)
+    {
+        yield return new WaitForSeconds(p);
+        canvasInstruccion.SetActive(false);
     }
 
     GameObject FindInActiveObjectByName(string name)
