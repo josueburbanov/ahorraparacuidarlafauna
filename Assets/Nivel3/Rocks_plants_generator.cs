@@ -40,15 +40,19 @@ public class Rocks_plants_generator : MonoBehaviour
             spawnPosition.x += 10f;
             if (needRock)
             {
+                spawnPosition.x -= 1.8f;
                 indexPlatform = Random.Range(2, plataformPrefabs.Count);
                 needRock = false;
             }
 
-            Instantiate(plataformPrefabs[indexPlatform], spawnPosition, Quaternion.identity);
             if(indexPlatform == 0 || indexPlatform == 1)
             {
+                spawnPosition.x -= 1.8f;
                 needRock = true;
             }
+
+            Instantiate(plataformPrefabs[indexPlatform], spawnPosition, Quaternion.identity);
+
             spawnPositionFood = spawnPosition;
             spawnPositionFood.x += Random.Range(1,3);
             spawnPositionFood.y += Random.Range(1, 3);

@@ -45,27 +45,23 @@ public class controladorDialogo : MonoBehaviour
             canvasDialogo.SetActive(true);
             greatText.text = "Genial! Has <b>ahorrado</b> 50 continúa así.\n<b>Ahorrar</b> requiere persistencia.";
             compradorOneTime20 = false;
-            //StartCoroutine(waitSomeSeconds());
-            transicion.GetComponent<Animator>().SetTrigger("Resume");
-            StartCoroutine(Pause(3));
+            StartCoroutine(waitSomeSeconds());
+
         }
         else if(food_catch_detector.foodCounter >= 100 && food_catch_detector.foodCounter <= 108 && compradorOneTime60 && Time.timeScale == 1)
         {
             canvasDialogo.SetActive(true);
             greatText.text = "Has <b>ahorrado</b> 100!\nContinua <b>ahorrando</b> y lograrás pasar de nivel.";
             compradorOneTime60 = false;
-            //StartCoroutine(waitSomeSeconds());
-            transicion.GetComponent<Animator>().SetTrigger("Resume");
-            StartCoroutine(Pause(3));
+            StartCoroutine(waitSomeSeconds());
+
         }
         else if (food_catch_detector.foodCounter >= 120 && food_catch_detector.foodCounter <= 128 && compradorOneTime90 && Time.timeScale == 1)
         {
             canvasDialogo.SetActive(true);
             greatText.text = "Genial has <b>ahorrado</b> 120!\n<b>Ahorrar</b> te ayudará a abrir el siguiente nivel.";
             compradorOneTime90 = false;
-            //StartCoroutine(waitSomeSeconds());
-            transicion.GetComponent<Animator>().SetTrigger("Resume");
-            StartCoroutine(Pause(3));
+            StartCoroutine(waitSomeSeconds());
         }
     }
 

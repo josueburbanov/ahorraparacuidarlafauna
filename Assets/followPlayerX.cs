@@ -75,6 +75,7 @@ public class followPlayerX : MonoBehaviour
         {
             if (checkpoint.isCheckedIn)
             {
+                print("was checked in");
                 targetTransform.transform.position = checkpoint.checkedInPosition;
                 food_catch_detector.foodCounter = checkpoint.foodCounter;
                 food_catch_detector.comodinesPositivos = checkpoint.positiveCounter;
@@ -89,7 +90,6 @@ public class followPlayerX : MonoBehaviour
                     {
                         if (player.tienePrestamosImpagos())
                         {
-                            print("--------Prestamo eliminado");
                             player.pagarPrestamo();
                         }
                     }
@@ -129,7 +129,6 @@ public class followPlayerX : MonoBehaviour
         else
         {
             tempVec3.x = targetTransform.position.x + 5f;
-            //tempVec3.y = this.transform.position.y;
             tempVec3.y = targetTransform.position.y + 4f;
 
             if (isDialog)

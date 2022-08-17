@@ -45,7 +45,7 @@ public class PlataformsGenerator : MonoBehaviour
 
 
             int indexPlatform = (int)System.Math.Round(posPrefbs);
-            spawnPosition.y = Random.Range(-7, -3);
+            spawnPosition.y = Random.Range(-8, -2);
             spawnPosition.x += Random.Range(0, plataformPrefabs[indexPlatform].GetComponent<SpriteRenderer>().bounds.size.x / 2) + previousPlataformX + 1f;
             previousPlataformX = plataformPrefabs[indexPlatform].GetComponent<SpriteRenderer>().bounds.size.x;
             Instantiate(plataformPrefabs[indexPlatform], spawnPosition, Quaternion.identity);
@@ -85,7 +85,8 @@ public class PlataformsGenerator : MonoBehaviour
             }
         }
         spawnPosition.x += plataformPrefabs[plataformPrefabs.Count - 1].GetComponent<SpriteRenderer>().bounds.size.x + last_plataformPrefab.GetComponent<SpriteRenderer>().bounds.size.x + 1f;
-        Instantiate(last_plataformPrefab, spawnPosition, Quaternion.identity);
+        spawnPositionFood.y -= 6f;
+        Instantiate(last_plataformPrefab, spawnPosition, Quaternion.Euler(0f,0f,20f));
 
     }
 

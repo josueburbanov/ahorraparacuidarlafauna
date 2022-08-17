@@ -92,7 +92,12 @@ public class player_controller1 : MonoBehaviour
         {
             doubleJump = false;
             anim.SetBool("isJumping", false);
+            if(speed > 0) { 
             anim.SetBool("isRunning", true);
+            }else
+            {
+                anim.SetBool("isRunning", false);
+            }
             isAbleToDJump = false;
         }
         else

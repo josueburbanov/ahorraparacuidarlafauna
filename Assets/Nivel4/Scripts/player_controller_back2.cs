@@ -41,7 +41,7 @@ public class player_controller_back2 : MonoBehaviour
                 player34.SetActive(true);
                 player34.GetComponent<Animator>().SetTrigger("takeOf");
                 player34.GetComponent<Animator>().SetBool("isJumping", true);
-                player34.transform.localScale = new Vector3(-player34.transform.localScale.x, player34.transform.localScale.y, player34.transform.localScale.z);
+                player34.transform.eulerAngles = new Vector3(0, 180, 0);
                 gameObject.SetActive(false);
                 Rigidbody2D rb = player34.GetComponent<Rigidbody2D>();
                 rb.velocity = new Vector2(-1,1) * speed;
@@ -52,7 +52,7 @@ public class player_controller_back2 : MonoBehaviour
                 player34.SetActive(true);
                 player34.GetComponent<Animator>().SetTrigger("takeOf");
                 player34.GetComponent<Animator>().SetBool("isJumping", true);
-                player34.transform.localScale = new Vector3(-player34.transform.localScale.x, player34.transform.localScale.y, player34.transform.localScale.z);
+                player34.transform.eulerAngles = new Vector3 (0, 0, 0);
                 gameObject.SetActive(false);
                 Rigidbody2D rb = player34.GetComponent<Rigidbody2D>();
                 rb.velocity = Vector2.one * speed;

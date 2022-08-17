@@ -33,6 +33,7 @@ public class escalera2_controller : MonoBehaviour
             Collider2D oso34Collider = collision.collider;
             oso34Collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Vector3 spawPosition = new Vector3(transform.position.x, oso34Collider.transform.position.y, oso34Collider.transform.position.z);
+            print(spawPosition);
             PlayerBack.transform.position = spawPosition;
             PlayerBack.SetActive(true);
             collision.collider.gameObject.SetActive(false);
