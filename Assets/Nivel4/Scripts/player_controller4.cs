@@ -14,7 +14,6 @@ public class player_controller4 : MonoBehaviour
     public float checkRadius;
     public Transform groundPos;
     public LayerMask whatIsGround;
-    private bool letsmove;
 
     public float jumpTime;
 
@@ -22,7 +21,7 @@ public class player_controller4 : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(Pause(3));
+        //StartCoroutine(Pause(3));
     }
 
     private IEnumerator Pause(int p)
@@ -34,7 +33,6 @@ public class player_controller4 : MonoBehaviour
             yield return 0;
 
         }
-        letsmove = true;
         Time.timeScale = 1f;
     }
 
@@ -44,7 +42,6 @@ public class player_controller4 : MonoBehaviour
         //if someone clicks on UI
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (EventSystem.current.currentSelectedGameObject) return;
-        if (!letsmove)return;
 
 
         isGrounded = Physics2D.OverlapCircle(groundPos.position, checkRadius, whatIsGround);

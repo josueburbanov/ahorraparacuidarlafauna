@@ -12,6 +12,7 @@ public class escalera2_controller : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(Pause(3));
         if (followPlayerX.isOso)
         {
             PlayerBack = OsoBack;
@@ -26,6 +27,18 @@ public class escalera2_controller : MonoBehaviour
         }
     }
 
+    private IEnumerator Pause(int p)
+    {
+        Time.timeScale = 0.0001f;
+        float pauseEndTime = Time.realtimeSinceStartup + p;
+        while (Time.realtimeSinceStartup < pauseEndTime)
+        {
+            yield return 0;
+
+        }
+        Time.timeScale = 1f;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isFirstCollision)
@@ -33,7 +46,6 @@ public class escalera2_controller : MonoBehaviour
             Collider2D oso34Collider = collision.collider;
             oso34Collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Vector3 spawPosition = new Vector3(transform.position.x, oso34Collider.transform.position.y, oso34Collider.transform.position.z);
-            print(spawPosition);
             PlayerBack.transform.position = spawPosition;
             PlayerBack.SetActive(true);
             collision.collider.gameObject.SetActive(false);

@@ -29,9 +29,6 @@ public class player_controller_back2 : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (EventSystem.current.currentSelectedGameObject) return;
         
-
-
-
         isGrounded = Physics2D.OverlapCircle(groundPos.position, checkRadius, whatIsGround);
         if (Input.GetMouseButtonDown(0) && isGrounded)
         {

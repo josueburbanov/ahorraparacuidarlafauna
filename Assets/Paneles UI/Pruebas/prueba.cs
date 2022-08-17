@@ -14,7 +14,7 @@ public class prueba : MonoBehaviour
                 NickName = "pepino", Nombre = "Josue",
                 CurrentPartida = new Partida() {
                     Niveles = new List<Nivel>(new Nivel[7]),
-                    Personaje = "tapir"
+                    Personaje = "armadillo"
                     }
                 }
             }
@@ -34,7 +34,7 @@ public class prueba : MonoBehaviour
             CurrentPartida = new Partida()
             {
                 Niveles = new List<Nivel>(new Nivel[7]),
-                Personaje = "tapir"
+                Personaje = "armadillo"
 
             }
         };
