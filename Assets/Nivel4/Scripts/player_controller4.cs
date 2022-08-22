@@ -14,8 +14,13 @@ public class player_controller4 : MonoBehaviour
     public float checkRadius;
     public Transform groundPos;
     public LayerMask whatIsGround;
-
-    public float jumpTime;
+    public static bool movingRight;
+    public static bool movingLeft;
+    private bool isJumping;
+    private float jumpTimeCounter;
+    private bool doubleJump;
+    private bool isAbleToDJump;
+    public float jumpTime = 0.3f;
 
     void Start()
     {
@@ -49,17 +54,68 @@ public class player_controller4 : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && isGrounded == true)
         {
             anim.SetTrigger("takeOf");
+            isJumping = true;
+            isGrounded = false;
+            jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.one * jumpForce;
             
         }
 
-        if (isGrounded == true)
+        if (isGrounded)
         {
+            doubleJump = false;
+            isAbleToDJump = false;
             anim.SetBool("isJumping", false);
         }
         else
         {
             anim.SetBool("isJumping", true);
+        }
+
+        if(movingRight || movingLeft)
+        {
+            if (Input.GetMouseButton(0) && isJumping)
+            {
+                if (jumpTimeCounter > 0)
+                {
+                    rb.velocity = Vector2.up * jumpForce;
+                    jumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0) && !isAbleToDJump)
+            {
+                isJumping = false;
+                isAbleToDJump = true;
+            }
+
+            if (isGrounded == false && doubleJump == false && isAbleToDJump == true && Input.GetMouseButtonDown(0))
+            {
+                isAbleToDJump = false;
+                isJumping = true;
+                doubleJump = true;
+                jumpTimeCounter = jumpTime;
+                rb.velocity = Vector2.up * jumpForce;
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (movingRight)
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+            anim.SetBool("isRunning", true);
+        }
+        else if(movingLeft)
+        {
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            anim.SetBool("isRunning", true);
         }
     }
 }

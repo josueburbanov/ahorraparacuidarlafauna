@@ -23,6 +23,7 @@ public class followPlayerX : MonoBehaviour
     public bool isDialog;
     public bool needToBeCentered;
     public bool notJumper;
+    public bool smoothed;
 
     private void Awake()
     {
@@ -98,13 +99,12 @@ public class followPlayerX : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         bool checker = targetTransform2 != null ? targetTransform2.gameObject.activeSelf : false;
         if (checker)
         {
             tempVec3.x = targetTransform2.position.x + 5f;
-            //tempVec3.y = this.transform.position.y;
             tempVec3.y = targetTransform2.position.y + 4f;
 
             if (isDialog)
@@ -120,6 +120,13 @@ public class followPlayerX : MonoBehaviour
             else if (notJumper)
             {
                 tempVec3.x = targetTransform2.position.x;
+            }
+            else if (smoothed)
+            {
+                tempVec3.x = targetTransform.position.x + 5f;
+                tempVec3.y = targetTransform.position.y + 2f;
+                Vector3 smoothedPosition = Vector3.Lerp(transform.position, tempVec3, 0.125f);
+                tempVec3 = smoothedPosition;
             }
 
 
@@ -145,6 +152,13 @@ public class followPlayerX : MonoBehaviour
             {
                 tempVec3.x = targetTransform.position.x;
                 tempVec3.y = transform.position.y;
+            }
+            else if (smoothed)
+            {
+                tempVec3.x = targetTransform.position.x + 5f;
+                tempVec3.y = targetTransform.position.y + 1f;
+                Vector3 smoothedPosition = Vector3.Lerp(transform.position, tempVec3, 0.125f);
+                tempVec3 = smoothedPosition;
             }
 
             tempVec3.z = this.transform.position.z;

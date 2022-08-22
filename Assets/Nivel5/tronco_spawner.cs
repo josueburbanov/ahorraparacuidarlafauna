@@ -18,20 +18,18 @@ public class tronco_spawner : MonoBehaviour
         {
             StartCoroutine(TroncoDrop());
             isHit = true;
-            print("spawner activo "+name);
         }
         
     }
 
     void Start()
     {
-        spawnerPosition.x = transform.position.x;
     }
 
     IEnumerator TroncoDrop()
     {
         spawnerPosition = transform.localPosition;
-        spawnerPosition.x += length * 12;
+        spawnerPosition.x += length * 20;
         while ( counter < length)
         {
             GameObject troncoSpawed = Instantiate(tronco, spawnerPosition, Quaternion.identity);
