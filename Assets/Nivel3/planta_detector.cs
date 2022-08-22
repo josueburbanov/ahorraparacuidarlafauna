@@ -30,7 +30,7 @@ public class planta_detector : MonoBehaviour
             rb.Sleep();
             collision.collider.enabled = false;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            StartCoroutine(cameraShake.Shake(.3f, 0.4f, (Camera)GameObject.FindObjectOfType(typeof(Camera))));
+            //StartCoroutine(cameraShake.Shake(.3f, 0.4f, (Camera)GameObject.FindObjectOfType(typeof(Camera))));
             canvas.GetComponent<Animator>().SetTrigger("GameOver");
 
         }
@@ -63,11 +63,11 @@ public class planta_detector : MonoBehaviour
     Rigidbody2D rb;
     void Update()
     {
-        if(!(rb is null))
-        {
-            rb.angularVelocity = 0;
-            rb.AddForce(new Vector2(-10f,-100f));
-        }
+        //if(!(rb is null))
+        //{
+        //    rb.angularVelocity = 0;
+        //    rb.AddForce(new Vector2(-10f,-100f));
+        //}
         
         if (isGameOver)
         {

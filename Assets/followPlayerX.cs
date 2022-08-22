@@ -157,7 +157,7 @@ public class followPlayerX : MonoBehaviour
             {
                 tempVec3.x = targetTransform.position.x + 5f;
                 tempVec3.y = targetTransform.position.y + 1f;
-                Vector3 smoothedPosition = Vector3.Lerp(transform.position, tempVec3, 0.125f);
+                Vector3 smoothedPosition = Vector3.Lerp(transform.position, tempVec3, 0.12f);
                 tempVec3 = smoothedPosition;
             }
 

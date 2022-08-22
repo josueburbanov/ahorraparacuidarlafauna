@@ -21,15 +21,11 @@ public class transport_nivel2 : MonoBehaviour
                 collision.collider.transform.SetParent(gameObject.transform);
                 GameObject.Find("Oso piezasperfil34").GetComponent<player_controller1>().speed = 0;
                 //StartCoroutine(waitTilEstabilize());
-
+                isHit = true;
             }
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        GameObject.Find("Oso piezasperfil34").GetComponent<player_controller1>().speed = 0.1f;
-    }
 
     IEnumerator waitTilEstabilize()
     {
