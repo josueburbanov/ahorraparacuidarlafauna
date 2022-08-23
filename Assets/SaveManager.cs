@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Globalization;
+using UnityEngine.Networking;
 
 public class SaveManager : MonoBehaviour
 {
@@ -21,6 +22,27 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    IEnumerator postUser(string uri, Jugador jugador)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("nickName", jugador.NickName);
+        form.AddField("nombre", jugador.Nombre);
+        form.AddField("ciudad", jugador.Ciudad);
+        form.AddField("correoE", jugador.Correoe);
+
+        UnityWebRequest uwr = UnityWebRequest.Post(uri, form);
+        yield return uwr.SendWebRequest();
+
+        if (uwr.result == UnityWebRequest.Result.ConnectionError)
+        {
+            Debug.Log("Error While Sending: " + uwr.error);
+        }
+        else
+        {
+            Debug.Log("Received: " + uwr.downloadHandler.text);
+        }
+    }
+
     public void crearJugador()
     {
         TextMeshProUGUI TextNick = GameObject.Find("TextNick").GetComponent<TextMeshProUGUI>();
@@ -28,7 +50,10 @@ public class SaveManager : MonoBehaviour
         TextMeshProUGUI TextNombre = GameObject.Find("TextNombre").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI TextCiudad = GameObject.Find("TextCiudad").GetComponent<TextMeshProUGUI>();
 
-        if (findPlayerByNick(TextNick.text) is null) //Check nick
+        
+
+        //if (findPlayerByNick(TextNick.text) is null) //Check nick
+        if(!isThereSomePlayer(TextNick.text))
         {
             Jugador newJugador = new Jugador();
             newJugador.NickName = TextNick.text.Trim();
@@ -44,6 +69,7 @@ public class SaveManager : MonoBehaviour
             Jugador = newJugador;
             Juego.Jugadores.Add(Jugador);
             Debug.LogAssertion("Jugador nuevo creado..." + Jugador.NickName);
+            StartCoroutine(postUser("http://localhost:3000", newJugador));
         }
         else
         {
@@ -435,6 +461,24 @@ public class SaveManager : MonoBehaviour
         return aux;
     }
 
+    public static bool isThereSomePlayer(string nick)
+    {
+        Jugador aux = Juego.Jugadores.Find(x => string.Equals(x.NickName.Replace("\u200B", ""), nick));
+        if (aux == null)
+        {
+            aux = Juego.Jugadores.Find(x => string.Equals(x.NickName, nick));
+            if( aux != null)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        }else
+        {
+            return true;
+        }
+    }
 
 
     public static Partida findPartidaById(string idPartida)
