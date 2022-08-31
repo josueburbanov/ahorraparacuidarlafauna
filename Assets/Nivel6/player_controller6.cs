@@ -124,15 +124,7 @@ public class player_controller6 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rb.velocity != Vector2.zero) rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if (rb.velocity == Vector2.zero)
-        {
-            anim.SetBool("isRunning", false);
-        }
-        else
-        {
-            anim.SetBool("isRunning", true);
-        }
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
 }

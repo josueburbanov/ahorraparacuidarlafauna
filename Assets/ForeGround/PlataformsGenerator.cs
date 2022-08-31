@@ -45,7 +45,7 @@ public class PlataformsGenerator : MonoBehaviour
 
 
             int indexPlatform = (int)System.Math.Round(posPrefbs);
-            spawnPosition.y = Random.Range(-9f, -3f);
+            spawnPosition.y = Random.Range(-8f, -4f);
             spawnPosition.x += Random.Range(0, plataformPrefabs[indexPlatform].GetComponent<SpriteRenderer>().bounds.size.x / 2) + previousPlataformX + 1f;
             previousPlataformX = plataformPrefabs[indexPlatform].GetComponent<SpriteRenderer>().bounds.size.x;
             Instantiate(plataformPrefabs[indexPlatform], spawnPosition, Quaternion.identity);

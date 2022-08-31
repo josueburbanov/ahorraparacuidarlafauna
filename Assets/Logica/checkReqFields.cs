@@ -13,22 +13,22 @@ public class checkReqFields : MonoBehaviour
     void Start()
     {
         button = GetComponent<Button>();
-        button.enabled = false;
+        //button.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (textNickName != null && textCorreo != null)
-        {
-            if (textNickName.text.Length != 1 && textCorreo.text.Length != 1)
-            {
-                button.enabled = true;
-            }
-            else
-            {
-                button.enabled = false;
-            }
-        }
+        //if (textNickName != null && textCorreo != null)
+        //{
+        //    if (textNickName.text.Length != 1 && textCorreo.text.Length != 1)
+        //    {
+        //        button.enabled = true;
+        //    }
+        //    else
+        //    {
+        //        button.enabled = false;
+        //    }
+        //}
     }
 }

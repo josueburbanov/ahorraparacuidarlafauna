@@ -48,7 +48,6 @@ public class player_controller4 : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (EventSystem.current.currentSelectedGameObject) return;
 
-
         isGrounded = Physics2D.OverlapCircle(groundPos.position, checkRadius, whatIsGround);
 
         if (Input.GetMouseButtonDown(0) && isGrounded == true)
@@ -58,7 +57,6 @@ public class player_controller4 : MonoBehaviour
             isGrounded = false;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.one * jumpForce;
-            
         }
 
         if (isGrounded)
@@ -74,12 +72,14 @@ public class player_controller4 : MonoBehaviour
 
         if(movingRight || movingLeft)
         {
+
             if (Input.GetMouseButton(0) && isJumping)
             {
                 if (jumpTimeCounter > 0)
                 {
                     rb.velocity = Vector2.up * jumpForce;
                     jumpTimeCounter -= Time.deltaTime;
+                    
                 }
                 else
                 {

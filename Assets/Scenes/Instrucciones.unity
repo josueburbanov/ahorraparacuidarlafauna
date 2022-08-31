@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaeee5a355b8be44ebd4405c636e4281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oso: {fileID: 0}
+  oso: {fileID: 1885498895}
   instruccionesSiguiente: {fileID: 0}
   stepNumber: 6
   alimentoOso: {fileID: 1088286109}
@@ -4103,7 +4103,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 30
+  m_SortingOrder: 33
   m_TargetDisplay: 0
 --- !u!224 &912607396
 RectTransform:

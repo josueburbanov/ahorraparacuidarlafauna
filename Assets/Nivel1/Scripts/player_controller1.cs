@@ -128,8 +128,10 @@ public class player_controller1 : MonoBehaviour
 
         if (isAbleToLand && isGrounded)
         {
-            anim.SetTrigger("land");
+
+            anim.SetBool("isJumping",false);
             isAbleToLand = false;
+           
         }
 
         if (isGrounded == false && doubleJump == false && isAbleToDJump == true && Input.GetMouseButtonDown(0))
@@ -140,6 +142,8 @@ public class player_controller1 : MonoBehaviour
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
+        
+        
     }
 
     private void FixedUpdate()

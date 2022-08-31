@@ -28,7 +28,7 @@ public class player_controller_back2 : MonoBehaviour
         //if someone clicks on UI
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (EventSystem.current.currentSelectedGameObject) return;
-        
+
         isGrounded = Physics2D.OverlapCircle(groundPos.position, checkRadius, whatIsGround);
         if (Input.GetMouseButtonDown(0) && isGrounded)
         {
@@ -41,7 +41,7 @@ public class player_controller_back2 : MonoBehaviour
                 player34.transform.eulerAngles = new Vector3(0, 180, 0);
                 gameObject.SetActive(false);
                 Rigidbody2D rb = player34.GetComponent<Rigidbody2D>();
-                rb.velocity = new Vector2(-1,1) * speed;
+                rb.velocity = new Vector2(-speed,speed);
             }
             else if(transform.position.x == -5.5f)
             {
@@ -52,7 +52,7 @@ public class player_controller_back2 : MonoBehaviour
                 player34.transform.eulerAngles = new Vector3 (0, 0, 0);
                 gameObject.SetActive(false);
                 Rigidbody2D rb = player34.GetComponent<Rigidbody2D>();
-                rb.velocity = Vector2.one * speed;
+                rb.velocity = new Vector2(1, 1) * speed;
             }
         }
     }

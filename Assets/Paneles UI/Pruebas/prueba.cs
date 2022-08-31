@@ -11,7 +11,7 @@ public class prueba : MonoBehaviour
         {
             Id = 0,
             Jugadores = { new Jugador() { Id = "0001", Ciudad = "Quito", Correoe = "pepe@j.com",
-                NickName = "pepino", Nombre = "Josue",
+                NickName = "jugador_prueba", Nombre = "Josue",
                 CurrentPartida = new Partida() {
                     Niveles = new List<Nivel>(new Nivel[7]),
                     Personaje = "oso"
@@ -29,7 +29,7 @@ public class prueba : MonoBehaviour
             Id = "0001",
             Ciudad = "Quito",
             Correoe = "pepe@j.com",
-            NickName = "pepino",
+            NickName = "jugador_prueba",
             Nombre = "Josue",
             CurrentPartida = new Partida()
             {
