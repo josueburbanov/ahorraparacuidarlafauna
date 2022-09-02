@@ -14,6 +14,7 @@ public class checkReqFields : MonoBehaviour
     {
         button = GetComponent<Button>();
         //button.enabled = false;
+        button.enabled = true;
     }
 
     // Update is called once per frame

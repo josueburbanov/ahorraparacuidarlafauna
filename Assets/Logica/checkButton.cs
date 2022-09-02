@@ -12,22 +12,22 @@ public class checkButton : MonoBehaviour
     void Start()
     {
         textNickName = GetComponent<TextMeshProUGUI>();
-        button.enabled = false;
+        //button.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(textNickName != null)
-        {
-            if (textNickName.text.Length != 1)
-            {
-                button.enabled = true;
-            }
-            else
-            {
-                button.enabled = false;
-            }
-        }
+        //if(textNickName != null)
+        //{
+        //    if (textNickName.text.Length != 1)
+        //    {
+        //        button.enabled = true;
+        //    }
+        //    else
+        //    {
+        //        button.enabled = false;
+        //    }
+        //}
     }
 }

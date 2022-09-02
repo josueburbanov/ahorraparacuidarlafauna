@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel7.unity
     guid: 78aa3a9a64315774cb93fe1fced46222
+  - enabled: 1
+    path: Assets/Scenes/Nivel7Armadillo.unity
+    guid: 24afbba31a43b7343a1921d409390903
+  - enabled: 1
+    path: Assets/Scenes/Nivel7Tapir.unity
+    guid: 1fc669ee203adc640ac0371e159b2b4c
   m_configObjects: {}

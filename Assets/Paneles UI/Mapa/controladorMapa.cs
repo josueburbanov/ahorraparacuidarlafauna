@@ -41,8 +41,8 @@ public class controladorMapa : MonoBehaviour
 
 
 
-        switch (player.getLastFinishedLevel() + 1)
-        //switch (7)
+        //switch (player.getLastFinishedLevel() + 1)
+        switch (7)
         {
             case 1:
                 ImagenNivelCompleto1.SetActive(true);
