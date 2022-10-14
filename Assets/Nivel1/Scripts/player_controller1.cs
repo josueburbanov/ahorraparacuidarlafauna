@@ -10,7 +10,7 @@ public class player_controller1 : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     public float jumpForce;
-    public float speed = 8f;
+    public float speed = 10f;
     public float formerSpeed;
     private bool isGrounded;
     public float checkRadius;
